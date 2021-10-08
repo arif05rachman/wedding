@@ -12,6 +12,9 @@ mongodb.checkDb((err) => {
     app.use(cors());
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.get("/", (req, res) => {
+      res.send("API of Wedding Putri and Arif");
+    });
     app.use("/", require("./routes"));
     app.use(responseHandler);
     app.use(errorHandler);

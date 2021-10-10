@@ -81,17 +81,17 @@ const Carousel = ({ wishes }) => {
           {sliderControl(true)}
           {wishes?.map((value, i) => (
             <div
-              className="w-full flex-shrink-0 text-center sm:py-7 sm:px-16 md:py-8 md:px-16 lg:py-10 lg:px-20 xl:py-12 xl:px-24 2xl:py-14 2xl:px-64 font-alef relative flex flex-col justify-between"
+              className="w-full rounded-md flex-shrink-0 text-center py-5 px-10 sm:py-7 sm:px-16 md:py-8 md:px-16 lg:py-10 lg:px-20 xl:py-12 xl:px-24 2xl:py-14 2xl:px-64 font-alef relative flex flex-col justify-between"
               key={i}
               ref={refs[i]}
               style={{
                 backgroundImage: `url(${wishesPaper})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
-                height: "20rem",
+                height: "auto",
               }}
             >
-              <p className="text-xl">{value?.post}</p>
+              <p className="text-base">{value?.post}</p>
               <div className="w-full flex flex-col justify-center text-center">
                 <p className="font-Sacramento text-1.875xl">
                   - {value?.name} -

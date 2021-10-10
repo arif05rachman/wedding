@@ -1,5 +1,5 @@
 import React from "react";
-import Backround from "../assets/images/background3.jpg";
+import Backround from "../assets/images/background.jpg";
 const Slider = () => {
   return (
     <div className="w-full h-4/6">

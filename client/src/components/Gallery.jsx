@@ -1,26 +1,20 @@
 import React from "react";
 import {
-  Gallery01,
-  Gallery02,
-  Gallery03,
-  Gallery04,
-  Gallery05,
-  Gallery06,
-  Gallery07,
-  Gallery08,
-  Gallery09,
-  Gallery10,
-  Gallery11,
-  Gallery12,
-  Gallery13,
-  Gallery14,
-  Gallery15,
-  Gallery16,
-  Gallery17,
-  Gallery18,
-  Gallery19,
-  Gallery20,
-  Gallery21,
+  L01,
+  L02,
+  P01,
+  P02,
+  P03,
+  P04,
+  P05,
+  P06,
+  P07,
+  P08,
+  P09,
+  P10,
+  P11,
+  P12,
+  P13,
 } from "../assets/images/gallery";
 
 const Gallery = () => {
@@ -36,16 +30,16 @@ const Gallery = () => {
               <div
                 className="h-full w-full bg-cover rounded shadow-md"
                 style={{
-                  backgroundImage: `url(${Gallery01})`,
+                  backgroundImage: `url(${P01})`,
                 }}
               ></div>
             </div>
             <div className="md:w-1/2 h-auto px-4">
               <div className="mb-8">
-                <img className="rounded shadow-md" src={Gallery18} alt="" />
+                <img className="rounded shadow-md" src={L01} alt="" />
               </div>
               <div>
-                <img className="rounded shadow-md" src={Gallery04} alt="" />
+                <img className="rounded shadow-md" src={L02} alt="" />
               </div>
             </div>
           </div>
@@ -54,10 +48,10 @@ const Gallery = () => {
         <section className="py-8 px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={Gallery03} alt="" />
+              <img className="rounded shadow-md" src={P08} alt="" />
             </div>
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={Gallery05} alt="" />
+              <img className="rounded shadow-md" src={P03} alt="" />
             </div>
           </div>
         </section>
@@ -65,10 +59,21 @@ const Gallery = () => {
         <section className="py-8 px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={Gallery06} alt="" />
+              <img className="rounded shadow-md" src={P12} alt="" />
             </div>
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={Gallery07} alt="" />
+              <img className="rounded shadow-md" src={P05} alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 px-4">
+          <div className="flex flex-wrap -mx-4">
+            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+              <img className="rounded shadow-md" src={P06} alt="" />
+            </div>
+            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+              <img className="rounded shadow-md" src={P07} alt="" />
             </div>
           </div>
         </section>
@@ -76,51 +81,22 @@ const Gallery = () => {
         <section className="pt-8 px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery08} alt="" />
+              <img className="rounded shadow-md" src={P02} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery09} alt="" />
+              <img className="rounded shadow-md" src={P09} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery10} alt="" />
+              <img className="rounded shadow-md" src={P10} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery11} alt="" />
+              <img className="rounded shadow-md" src={P11} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery12} alt="" />
+              <img className="rounded shadow-md" src={P04} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery13} alt="" />
-            </div>
-          </div>
-        </section>
-
-        <section className="py-8 px-4">
-          <div className="flex flex-wrap -mx-4 -mb-8">
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery14} alt="" />
-            </div>
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery15} alt="" />
-            </div>
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery16} alt="" />
-            </div>
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery17} alt="" />
-            </div>
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery02} alt="" />
-            </div>
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery19} alt="" />
-            </div>
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery20} alt="" />
-            </div>
-            <div className="md:w-1/4 px-4 mb-8">
-              <img className="rounded shadow-md" src={Gallery21} alt="" />
+              <img className="rounded shadow-md" src={P13} alt="" />
             </div>
           </div>
         </section>

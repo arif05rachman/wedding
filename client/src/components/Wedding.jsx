@@ -115,9 +115,7 @@ const Wedding = () => {
             <p className="text-tiny">daughter of</p>
             <p>Bp. Burhan Herwadi & Ibu Yiyis Dewi Darwisah</p>
           </div>
-          <div className="text-3xl sm:text-6xl mb-2 font-Sacramento text-yellow-700">
-            &amp;
-          </div>
+          <p className="text-3xl sm:text-6xl mb-2 font-Sacramento">&amp;</p>
           <div
             className="
               grid
@@ -170,7 +168,7 @@ const Wedding = () => {
               Arif Rachman Husen <br />
               (Arif)
             </p>
-            <p className="text-tiny">daughter of</p>
+            <p className="text-tiny">son of</p>
             <p>Bp. Tengku Husen Yusup & Ibu U Solihah</p>
           </div>
         </div>

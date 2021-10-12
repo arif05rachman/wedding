@@ -110,7 +110,7 @@ const Wedding = () => {
             </div>
             <p className="font-bold">
               Putri Fatimah Azzahra <br />
-              (PUPUT)
+              (Puput)
             </p>
             <p className="text-tiny">daughter of</p>
             <p>Bp. Burhan Herwadi & Ibu Yiyis Dewi Darwisah</p>

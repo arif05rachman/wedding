@@ -7,7 +7,7 @@ import {
   Wishes,
   Gallery,
   Protokol,
-  Footer
+  Footer,
 } from "./components";
 import Sound from "./assets/audio/sound.mp3";
 
@@ -26,7 +26,7 @@ const useAudio = (url) => {
     return () => {
       audio.removeEventListener("ended", () => setPlaying(false));
     };
-  }, []);
+  }, [audio]);
 
   return [playing, toggle];
 };

@@ -7,7 +7,29 @@ import {
   Wishes,
   Gallery,
   Protokol,
+  Footer
 } from "./components";
+import Sound from "./assets/audio/sound.mp3";
+
+const useAudio = (url) => {
+  const [audio] = useState(new Audio(url));
+  const [playing, setPlaying] = useState(false);
+
+  const toggle = () => setPlaying(!playing);
+
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+  }, [playing]);
+
+  useEffect(() => {
+    audio.addEventListener("ended", () => setPlaying(false));
+    return () => {
+      audio.removeEventListener("ended", () => setPlaying(false));
+    };
+  }, []);
+
+  return [playing, toggle];
+};
 
 const App = () => {
   // The back-to-top button is hidden at the beginning
@@ -27,8 +49,26 @@ const App = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  const [playing, toggle] = useAudio(Sound);
+
   return (
     <div>
+      <div className="music" onClick={toggle}>
+        {!playing ? (
+          <img
+            src="https://img.icons8.com/ios-filled/50/000000/mute--v1.png"
+            alt="mute"
+            width="32rem"
+          />
+        ) : (
+          <img
+            src="https://img.icons8.com/ios-filled/50/000000/room-sound.png"
+            alt="sound"
+            width="32rem"
+          />
+        )}
+      </div>
       <Navbar />
       <Countdown />
       <Slider />
@@ -41,6 +81,7 @@ const App = () => {
           &#8679;
         </button>
       )}
+      <Footer />
     </div>
   );
 };

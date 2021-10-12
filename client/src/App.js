@@ -6,6 +6,7 @@ import {
   Wedding,
   Wishes,
   Gallery,
+  Protokol,
 } from "./components";
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
       <Countdown />
       <Slider />
       <Wedding />
+      <Protokol />
       <Gallery />
       <Wishes />
       {showButton && (

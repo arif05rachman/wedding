@@ -3,7 +3,6 @@
 const { responseCode } = require("../utils/constant");
 
 module.exports = ({ code, error }, req, res, next) => {
-  console.log(error);
   if (responseCode.ERROR_CLIENT.includes(code)) {
     const newError = {
       code,

@@ -4,7 +4,7 @@ const { ObjectId } = require("mongodb");
 
 class wishesModel {
   static async find() {
-    const getData = await wishes.find().toArray();
+    const getData = await wishes.find().sort({ createdAt: -1 }).toArray();
     return getData;
   }
   static async findOne(id) {

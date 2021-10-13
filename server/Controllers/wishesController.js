@@ -32,7 +32,6 @@ class Wishes {
       const { id } = req.params;
       const dataWishes = await wishesModel.findOne(id);
       const response = await dataWishes;
-      console.log("RESPONSE", response);
       next({ code: 200, data: response });
     } catch (error) {
       next({ code: 500, error });

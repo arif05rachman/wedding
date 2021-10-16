@@ -17,11 +17,11 @@ import {
   P13,
 } from "../assets/images/gallery";
 
-const Gallery = () => {
+const Gallery = ({ language }) => {
   return (
     <div id="gallery">
       <h2 className="text-center md:text-lg sm:text-xs lg:text-3xl antialiased sm:subpixel-antialiased md:antialiased font-semibold">
-        Gallery
+        {language === "ID" ? "GALERI" : "GALLERY"}
       </h2>
       <div className="container mx-auto px-4">
         <section className="py-8 px-4">

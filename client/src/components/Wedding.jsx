@@ -3,7 +3,7 @@ import ArifImage from "../assets/images/arif.jpg";
 import PutriImage from "../assets/images/putri.jpg";
 import QRImage from "../assets/images/QR.jpeg";
 
-const Wedding = () => {
+const Wedding = ({ language }) => {
   return (
     <div
       id="invitation"
@@ -21,7 +21,7 @@ const Wedding = () => {
     "
     >
       <h2 className="text-center md:text-lg sm:text-xs lg:text-3xl antialiased sm:subpixel-antialiased md:antialiased font-semibold">
-        Invitation
+        {language === "ID" ? "Undangan" : "Invitation"}
       </h2>
       <div
         className="
@@ -36,10 +36,9 @@ const Wedding = () => {
   "
       >
         <p className="text-center xs:text-xs md:text-lg xl:text-xl text-base font-alef">
-          And one of His signs is that He created for you spouses from among
-          yourselves so that you may find comfort in them. And He has placed
-          between you compassion and mercy. Surely in this are signs for people
-          who reflect.
+          {language === "ID"
+            ? "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+            : "And one of His signs is that He created for you spouses from among yourselves so that you may find comfort in them. And He has placed between you compassion and mercy. Surely in this are signs for people who reflect."}
         </p>
         <p className="font-semibold md:text-1.5xl font-alef">(QS Ar-Rum 21)</p>
         <div className="w-1/5 divide-y divide-yellow-400">
@@ -48,7 +47,7 @@ const Wedding = () => {
           <p></p>
         </div>
         <p className="py-10 text-center md:text-lg sm:text-sm lg:text-1.5xl antialiased sm:subpixel-antialiased md:antialiased font-alef">
-          The wedding of
+          {language === "ID" ? "Pernikahan" : "The wedding of"}
         </p>
         <div
           className="
@@ -112,7 +111,9 @@ const Wedding = () => {
               Putri Fatimah Azzahra <br />
               (Puput)
             </p>
-            <p className="text-tiny">daughter of</p>
+            <p className="text-tiny">
+              {language === "ID" ? "putri dari" : "daughter of"}
+            </p>
             <p>Bp. Burhan Herwadi & Ibu Yiyis Dewi Darwisah</p>
           </div>
           <p className="text-3xl sm:text-6xl mb-2 font-Sacramento">&amp;</p>
@@ -168,7 +169,9 @@ const Wedding = () => {
               Arif Rachman Husen <br />
               (Arif)
             </p>
-            <p className="text-tiny">son of</p>
+            <p className="text-tiny">
+              {language === "ID" ? "putra dari" : "son of"}
+            </p>
             <p>Bp. Tengku Husen Yusup & Ibu U Solihah</p>
           </div>
         </div>
@@ -184,7 +187,7 @@ const Wedding = () => {
           md:py-16"
       >
         <p className="text-center md:text-lg sm:text-sm lg:text-1.5xl antialiased sm:subpixel-antialiased md:antialiased font-alef">
-          Will Be Held On
+          {language === "ID" ? "Akan diselenggarakan pada" : "Will Be Held On"}
         </p>
         <div
           className="
@@ -214,7 +217,9 @@ const Wedding = () => {
               width="8"
               height="9"
             />
-            <p className="font-medium md:text-1.875xl">AKAD</p>
+            <p className="font-medium md:text-1.875xl">
+              {language === "ID" ? "AKAD" : "Marriage Settlement"}
+            </p>
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADOSURBVHgBXZDLCYNAEIZn44KK4A4igngxHdhBUkJK0gpSguTuQQ/et4OkhFQggiD4zoxgDi4sDHz/Y3YFnI5lWTHdO43JsixKHAAREwJPho7jgGEY0Pd9JRkGQfBQSuW+75MOwbZtmOcZmqb5yJgOOfIoitDzPDBNc3d3XQdSyrekyDQMQ6SUHQohgLphmqav1rq6uK57O5wMt22DcRxZkHL9heJ56z/k7mEYsrquXyygGtkSQHat66pJkBVFoY/XSYq60kJIc1uWZXv+lx9JCVOQ9xijKgAAAABJRU5ErkJggg=="
               alt="/"
@@ -223,7 +228,7 @@ const Wedding = () => {
             />
           </div>
           <p className="font-medium md:text-1.5xl">
-            <span>October </span>
+            <span>{language === "ID" ? "Oktober" : "October"} </span>
             <span className="font-gilda">23, </span>
             <span className="font-gilda">2021 08.00 </span>
             <span>WIB</span>
@@ -231,7 +236,7 @@ const Wedding = () => {
           <p className="text-gray-500 text-center">
             <strong>Padepokan Seni Bumi Ageung</strong>
             <br /> Kampung Balandongan, Desa Pagersari, Kecamatan Pagerageung,
-            Kabupaten Tasikmalaya{" "}
+            Kabupaten Tasikmalaya
           </p>
         </div>
         <div
@@ -262,7 +267,9 @@ const Wedding = () => {
               width="8"
               height="9"
             />
-            <p className="font-medium md:text-1.875xl">RESEPSI</p>
+            <p className="font-medium md:text-1.875xl">
+              {language === "ID" ? "RESEPSI" : "RECEPTION"}
+            </p>
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADOSURBVHgBXZDLCYNAEIZn44KK4A4igngxHdhBUkJK0gpSguTuQQ/et4OkhFQggiD4zoxgDi4sDHz/Y3YFnI5lWTHdO43JsixKHAAREwJPho7jgGEY0Pd9JRkGQfBQSuW+75MOwbZtmOcZmqb5yJgOOfIoitDzPDBNc3d3XQdSyrekyDQMQ6SUHQohgLphmqav1rq6uK57O5wMt22DcRxZkHL9heJ56z/k7mEYsrquXyygGtkSQHat66pJkBVFoY/XSYq60kJIc1uWZXv+lx9JCVOQ9xijKgAAAABJRU5ErkJggg=="
               alt="/"
@@ -271,7 +278,7 @@ const Wedding = () => {
             />
           </div>
           <p className="font-medium md:text-1.5xl">
-            <span>October </span>
+            <span>{language === "ID" ? "Oktober" : "October"} </span>
             <span className="font-gilda">23, </span>
             <span className="font-gilda">2021 11.00 </span>
             <span>WIB</span>
@@ -279,7 +286,7 @@ const Wedding = () => {
           <p className="text-gray-500 text-center">
             <strong>Padepokan Seni Bumi Ageung</strong>
             <br /> Kampung Balandongan, Desa Pagersari, Kecamatan Pagerageung,
-            Kabupaten Tasikmalaya{" "}
+            Kabupaten Tasikmalaya
           </p>
         </div>
         <div>
@@ -287,10 +294,9 @@ const Wedding = () => {
             onClick={() => {
               window.open("https://g.page/bumi-ageung?share", "_blank");
             }}
-            style={{ backgroundColor: "#d5ad6d" }}
-            className="text-white font-bold py-2 px-4 rounded"
+            className="py-2 px-4 bg-gold text-white font-bold uppercase transform hover:scale-105 transition-all rounded"
           >
-            Show In Maps
+            {language === "ID" ? "Lihat Peta" : "Show In Maps"}
           </button>
         </div>
         <div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({language}) => {
   return (
     <footer
       className="
@@ -25,9 +25,9 @@ const Footer = () => {
         mb-16
       "
       >
-        <span>Photos by</span>
+        <span>{language === "ID" ? "Foto oleh" : "Photos by"}</span>
         <a
-          className="transform hover:scale-105 hover:text-yellow-600 transition-all"
+          className="transform hover:scale-105 font-bold hover:text-yellow-500 transition-all"
           href="https://www.instagram.com/screenshotfoto/"
           target="_blank"
           rel="noreferrer"

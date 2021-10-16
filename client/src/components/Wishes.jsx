@@ -5,8 +5,9 @@ import { API_URL } from "../constant";
 
 const { WISHES_URL } = API_URL;
 
-const Wishes = () => {
+const Wishes = ({ language }) => {
   const [wishes, setWishes] = useState();
+  const [isLoadingButton, setIsloadingButton] = useState(false);
   const [isDisabled, setIsDisabled] = useState(true);
   const [form, setForm] = useState({ name: "", post: "" });
   const fetchWishes = async () => {
@@ -23,13 +24,18 @@ const Wishes = () => {
 
   const postWishes = async (e) => {
     e.preventDefault();
+    setIsloadingButton(true);
     try {
       const res = await axios.post(WISHES_URL, form);
-      const { data } = res?.data;
-      console.log(data);
-      setWishes([...wishes, data]);
+      if (res) {
+        const { data } = res?.data;
+        setWishes([data, ...wishes]);
+        setForm({ name: "", post: "" });
+      }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsloadingButton(false);
     }
   };
 
@@ -47,6 +53,8 @@ const Wishes = () => {
   useEffect(() => {
     if (form?.name && form?.post) {
       setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
     }
   }, [form]);
 
@@ -57,20 +65,19 @@ const Wishes = () => {
     >
       <div className="w-full px-4 md:w-1/3 grid gap-6 md:text-lg mb-16 mx-auto">
         <h2 className="text-center md:text-lg sm:text-xs lg:text-3xl antialiased sm:subpixel-antialiased md:antialiased font-semibold">
-          Wishes
+          {language === "ID" ? "Ucapan" : "Wishes"}
         </h2>
         <p className="text-left">
-          Yes, you can still send us wishes! Make sure you write down your name
-          so that all of us can recognize you easily ^_^
+          {language === "ID"
+            ? `Anda masih dapat mengirimkan ucapan kepada kami! Pastikan Anda menuliskan nama anda
+          agar kami dapat mengenalimu dengan mudah`
+            : `you can still send us wishes! Make sure you write down your name
+            so that all of us can recognize you easily`}
         </p>
-        <form
-          className="grid gap-4"
-          onSubmit={(e) => postWishes(e)}
-          onChange={(e) => checkForm(e)}
-        >
+        <form className="grid gap-4" onSubmit={(e) => postWishes(e)}>
           <div className="grid gap-2">
             <label htmlFor="wishes_name" className="font-medium text-left">
-              Name
+              {language === "ID" ? "Nama" : "Name"}
             </label>
             <input
               className="bg-white py-2 px-4 outline-none border border-linen focus:border-linen-darker"
@@ -78,11 +85,15 @@ const Wishes = () => {
               id="wishes_name"
               type="text"
               name="name"
+              value={form?.name}
+              onChange={(e) => checkForm(e)}
             ></input>
           </div>
           <div className="grid gap-2">
             <label htmlFor="wishes_wishes" className="font-medium text-left">
-              Wishes for Putri &amp; Arif
+              {language === "ID"
+                ? "Ucapan untuk Putri & Arif"
+                : "Wishes for Putri & Arif"}
             </label>
             <textarea
               className="
@@ -98,23 +109,32 @@ const Wishes = () => {
               spellCheck="false"
               id="wishes_wishes"
               name="post"
+              value={form?.post}
+              onChange={(e) => checkForm(e)}
             ></textarea>
           </div>
           <div className="w-full grid sm:block sm:text-right">
             <button
               type="submit"
-              disabled={isDisabled}
-              style={{ backgroundColor: "#d5ad6d" }}
-              className={`py-2 px-4 text-white font-bold rounded-lg ${
-                isDisabled ? "cursor-not-allowed" : ""
-              } `}
+              disabled={isDisabled || isLoadingButton}
+              className={`py-2 px-4 bg-gold text-white font-bold uppercase ${
+                !isLoadingButton
+                  ? "transform hover:scale-105 transition-all rounded"
+                  : ""
+              } ${isDisabled ? "cursor-not-allowed" : ""} `}
             >
-              SEND WISHES
+              <div className="flex justify-around items-center">
+                {isLoadingButton ? (
+                  <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white block"></div>
+                ) : null}
+
+                <div>{language === "ID" ? "Kirim Ucapan" : "SEND WISHES"}</div>
+              </div>
             </button>
           </div>
         </form>
       </div>
-      <Carousel wishes={wishes} />
+      <Carousel wishes={wishes} language={language} />
     </section>
   );
 };

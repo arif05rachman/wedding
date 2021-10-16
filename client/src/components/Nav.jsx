@@ -1,5 +1,6 @@
 import imagePA from "../assets/images/PA.png";
-const Nav = () => {
+import { ID, EN } from "../assets/images";
+const Nav = ({ language, changeLaguage }) => {
   return (
     <nav
       className="
@@ -30,23 +31,47 @@ const Nav = () => {
         col-span-2
         grid grid-flow-col
         auto-cols-max
-        gap-2
-        sm:gap-6
+        gap-1
+        sm:gap-4
         place-self-end
+        justify-end
       "
       >
         <a
           href="#invitation"
           className="transform hover:scale-110 transition-all"
         >
-          INVITATION
+          {language === "ID" ? "UNDANGAN" : "INVITATION"}
         </a>
         <a href="#gallery" className="transform hover:scale-110 transition-all">
-          GALLERY
+          {language === "ID" ? "GALERI" : "GALLERY"}
         </a>
         <a href="#wishes" className=" transform hover:scale-110 transition-all">
-          WISHES
+          {language === "ID" ? "UNDANGAN" : "WISHES"}
         </a>
+        <span className="flex justify-center align-middle gap-1">
+          <button>
+            <img
+              src={ID}
+              alt="ID"
+              id="ID"
+              className="w-5"
+              onClick={changeLaguage}
+              style={language === "ID" ? { filter: "grayscale(100%)" } : {}}
+            />
+          </button>
+          <span> | </span>
+          <button>
+            <img
+              src={EN}
+              alt="EN"
+              id="EN"
+              className="w-5"
+              onClick={changeLaguage}
+              style={language === "EN" ? { filter: "grayscale(100%)" } : {}}
+            />
+          </button>
+        </span>
       </div>
     </nav>
   );

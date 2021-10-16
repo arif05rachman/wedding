@@ -57,6 +57,9 @@
     background-size: 30%;
     background-position: top;
   }
+  .button {
+    background-color: #d5ad6d;
+  }
   .bg-wishes {
     background: #000;
   }

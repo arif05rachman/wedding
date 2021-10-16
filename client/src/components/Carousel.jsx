@@ -10,7 +10,7 @@ SwiperCore.use([Pagination, Navigation]);
 var relativeTime = require("dayjs/plugin/relativeTime");
 dayjs.extend(relativeTime);
 
-const Carousel = ({ wishes }) => {
+const Carousel = ({ wishes, language }) => {
   const [state, setState] = useState({ windowWidth: window.innerWidth });
   const [showModal, setShowModal] = useState(false);
 
@@ -62,29 +62,28 @@ const Carousel = ({ wishes }) => {
       >
         <img src={gift} alt="GIFT" className="h-32 w-32" />
         <p className="text-center">
-          We also accept good intention in any form. Should you wish to send us
-          gifts
+          {language === "ID"
+            ? `Kami juga menerima niat baik dalam bentuk apapun. Jika Anda ingin mengirimkan hadiah kepada kami`
+            : `We also accept good intention in any form. Should you wish to send us
+          gifts`}
         </p>
         <div className="w-full grid sm:block text-center">
           <button
             onClick={() => setShowModal(true)}
             className="py-2 px-4 bg-gold text-white font-bold uppercase transform hover:scale-105 transition-all"
           >
-            show me
+            {language === "ID" ? "Lihat" : "Show me"}
           </button>
           {showModal ? (
             <>
               <div className="justify-center items-center overflow-x-hidden overflow-y-visible fixed inset-0 z-50 outline-none focus:outline-none">
                 <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                  {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                    {/*header*/}
                     <div className=" text-center p-5 border-b border-solid border-blueGray-200 rounded-t">
                       <h2 className="text-3xl font-semibold font-alef">
                         Gifts
                       </h2>
                     </div>
-                    {/*body*/}
                     <div className="grid gap-8 md:grid-cols-3 md:gap-6 lg:gap-16 pt-10">
                       <div className="grid gap-4 place-items-center p-4 pt-2">
                         <p
@@ -145,15 +144,13 @@ const Carousel = ({ wishes }) => {
                         </div>
                       </div>
                     </div>
-
-                    {/*footer*/}
                     <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                       <button
-                        className="background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="py-2 px-4 bg-gold text-white font-bold uppercase transform hover:scale-105 transition-all rounded"
                         type="button"
                         onClick={() => setShowModal(false)}
                       >
-                        Close
+                        {language === "ID" ? "Tutup" : "Close"}
                       </button>
                     </div>
                   </div>

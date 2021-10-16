@@ -34,6 +34,7 @@ const useAudio = (url) => {
 const App = () => {
   // The back-to-top button is hidden at the beginning
   const [showButton, setShowButton] = useState(false);
+  const [language, setLanguage] = useState("ID");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -52,6 +53,10 @@ const App = () => {
 
   const [playing, toggle] = useAudio(Sound);
 
+  const changeLaguage = (e) => {
+    const lang = e.target.id;
+    setLanguage(lang);
+  };
   return (
     <div>
       <div className="music" onClick={toggle}>
@@ -69,19 +74,22 @@ const App = () => {
           />
         )}
       </div>
-      <Navbar />
-      <Countdown />
-      <Slider />
-      <Wedding />
-      <Protokol />
-      <Gallery />
-      <Wishes />
+      <Navbar language={language} changeLaguage={changeLaguage} />
+      <Countdown language={language} />
+      <Slider language={language} />
+      <Wedding language={language} />
+      <Protokol language={language} />
+      <Gallery language={language} />
+      <Wishes language={language} />
       {showButton && (
-        <button onClick={scrollToTop} className="back-to-top">
+        <button
+          onClick={scrollToTop}
+          className="back-to-top bg-gold text-white font-bold uppercase transform hover:scale-105 transition-all hover:bg-yellow-500"
+        >
           &#8679;
         </button>
       )}
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };

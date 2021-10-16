@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 
-const Countdown = () => {
+const Countdown = ({ language }) => {
   const calculateTimeLeft = () => {
     const weddingDate = dayjs("2021-10-23T08:00:00+07:00");
     const difference = weddingDate.diff(dayjs());
@@ -54,20 +54,24 @@ const Countdown = () => {
             <p className="font-alef text-lg sm:text-3xl md:text-5xl">
               {addZeroPrefix(timeLeft.days)}
             </p>
-            <p className="font-alef text-2xs sm:text-xs md:text-base">DAYS</p>
+            <p className="font-alef text-2xs sm:text-xs md:text-base">
+              {language === "ID" ? "HARI" : "DAYS"}
+            </p>
           </div>
           <div className="bg-black rounded-md shadow-lg bg-opacity-70 p-2 sm:p-3 sm:py-5 md:py-10 text-yellow-400 w-12 sm:w-20 md:w-28 transition-all text-center">
             <p className="font-alef text-lg sm:text-3xl md:text-5xl">
               {addZeroPrefix(timeLeft.hours)}
             </p>
-            <p className="font-alef text-2xs sm:text-xs md:text-base">HOURS</p>
+            <p className="font-alef text-2xs sm:text-xs md:text-base">
+              {language === "ID" ? "JAM" : "HOURS"}
+            </p>
           </div>
           <div className="bg-black rounded-md shadow-lg bg-opacity-70 p-2 sm:p-3 sm:py-5 md:py-10 text-yellow-400 w-12 sm:w-20 md:w-28 transition-all text-center">
             <p className="font-alef text-lg sm:text-3xl md:text-5xl">
               {addZeroPrefix(timeLeft.minutes)}
             </p>
             <p className="font-alef text-2xs sm:text-xs md:text-base">
-              MINUTES
+              {language === "ID" ? "MENIT" : "MINUTES"}
             </p>
           </div>
           <div className="bg-black rounded-md shadow-lg bg-opacity-70 p-2 sm:p-3 sm:py-5 md:py-10 text-yellow-400 w-12 sm:w-20 md:w-28 transition-all text-center">
@@ -75,14 +79,16 @@ const Countdown = () => {
               {addZeroPrefix(timeLeft.seconds)}
             </p>
             <p className="font-alef text-2xs sm:text-xs md:text-base">
-              SECONDS
+              {language === "ID" ? "DETIK" : "SECONDS"}
             </p>
           </div>
         </section>
       </section>
       <section className="justify-center py-1 md:py-8 text-black grid gap-2">
         <p className="text-center font-bold sm:text-sm md:text-base xl:text-lg text-xs">
-          UNTIL THE WEDDING OF
+          {language === "ID"
+            ? "SAMPAI PERNIKAHNA DARI"
+            : "UNTIL THE WEDDING OF"}
         </p>
         <p className="font-Sacramento sm:text-5xl md:text-6xl xl:text-7xl text-3xl">
           Putri & Arif

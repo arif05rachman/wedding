@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Countdown,
   Navbar,
@@ -10,6 +10,7 @@ import {
   Footer,
 } from "./components";
 import Sound from "./assets/audio/sound.mp3";
+import { FadeInSection } from "./components";
 
 const useAudio = (url) => {
   const [audio] = useState(new Audio(url));
@@ -57,6 +58,7 @@ const App = () => {
     const lang = e.target.id;
     setLanguage(lang);
   };
+
   return (
     <div>
       <div className="music" onClick={toggle}>
@@ -75,12 +77,25 @@ const App = () => {
         )}
       </div>
       <Navbar language={language} changeLaguage={changeLaguage} />
-      <Countdown language={language} />
-      <Slider language={language} />
-      <Wedding language={language} />
-      <Protokol language={language} />
-      <Gallery language={language} />
-      <Wishes language={language} />
+
+      <FadeInSection>
+        <Countdown language={language} />
+      </FadeInSection>
+      <FadeInSection>
+        <Slider language={language} />
+      </FadeInSection>
+      <FadeInSection>
+        <Wedding language={language} />
+      </FadeInSection>
+      <FadeInSection>
+        <Protokol language={language} />
+      </FadeInSection>
+      <FadeInSection>
+        <Gallery language={language} />
+      </FadeInSection>
+      <FadeInSection>
+        <Wishes language={language} />
+      </FadeInSection>
       {showButton && (
         <button
           onClick={scrollToTop}

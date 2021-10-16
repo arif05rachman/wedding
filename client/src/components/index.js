@@ -7,3 +7,4 @@ export { default as Gallery } from "./Gallery";
 export { default as Carousel } from "./Carousel";
 export { default as Protokol } from "./Protokol";
 export { default as Footer } from "./Footer";
+export { default as FadeInSection } from "./FadeInSection";

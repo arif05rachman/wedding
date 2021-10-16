@@ -16,7 +16,7 @@ import {
   P12,
   P13,
 } from "../assets/images/gallery";
-
+import { FadeInSection } from ".";
 const Gallery = ({ language }) => {
   return (
     <div id="gallery">
@@ -24,82 +24,89 @@ const Gallery = ({ language }) => {
         {language === "ID" ? "GALERI" : "GALLERY"}
       </h2>
       <div className="container mx-auto px-4">
-        <section className="py-8 px-4">
-          <div className="flex flex-wrap -mx-4">
-            <div className="hidden md:block md:w-1/2 px-4">
-              <div
-                className="h-full w-full bg-cover rounded shadow-md"
-                style={{
-                  backgroundImage: `url(${P01})`,
-                }}
-              ></div>
-            </div>
-            <div className="md:w-1/2 h-auto px-4">
-              <div className="mb-8">
-                <img className="rounded shadow-md" src={L01} alt="" />
+        <FadeInSection>
+          <section className="py-8 px-4">
+            <div className="flex flex-wrap -mx-4">
+              <div className="hidden md:block md:w-1/2 px-4">
+                <div
+                  className="h-full w-full bg-cover rounded shadow-md"
+                  style={{
+                    backgroundImage: `url(${P01})`,
+                  }}
+                ></div>
               </div>
-              <div>
-                <img className="rounded shadow-md" src={L02} alt="" />
+              <div className="md:w-1/2 h-auto px-4">
+                <div className="mb-8">
+                  <img className="rounded shadow-md" src={L01} alt="" />
+                </div>
+                <div>
+                  <img className="rounded shadow-md" src={L02} alt="" />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          <section className="py-8 px-4">
+            <div className="flex flex-wrap -mx-4">
+              <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+                <img className="rounded shadow-md" src={P09} alt="" />
+              </div>
+              <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+                <img className="rounded shadow-md" src={P03} alt="" />
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
 
-        <section className="py-8 px-4">
-          <div className="flex flex-wrap -mx-4">
-            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P09} alt="" />
+        <FadeInSection>
+          <section className="py-8 px-4">
+            <div className="flex flex-wrap -mx-4">
+              <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+                <img className="rounded shadow-md" src={P06} alt="" />
+              </div>
+              <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+                <img className="rounded shadow-md" src={P02} alt="" />
+              </div>
             </div>
-            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P03} alt="" />
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          <section className="py-8 px-4">
+            <div className="flex flex-wrap -mx-4">
+              <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+                <img className="rounded shadow-md" src={P04} alt="" />
+              </div>
+              <div className="md:w-1/2 px-4 mb-8 md:mb-0">
+                <img className="rounded shadow-md" src={P05} alt="" />
+              </div>
             </div>
-          </div>
-        </section>
-
-        <section className="py-8 px-4">
-          <div className="flex flex-wrap -mx-4">
-            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P06} alt="" />
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          <section className="pt-8 px-4">
+            <div className="flex flex-wrap -mx-4">
+              <div className="md:w-1/3 px-4 mb-8">
+                <img className="rounded shadow-md" src={P07} alt="" />
+              </div>
+              <div className="md:w-1/3 px-4 mb-8">
+                <img className="rounded shadow-md" src={P08} alt="" />
+              </div>
+              <div className="md:w-1/3 px-4 mb-8">
+                <img className="rounded shadow-md" src={P10} alt="" />
+              </div>
+              <div className="md:w-1/3 px-4 mb-8">
+                <img className="rounded shadow-md" src={P11} alt="" />
+              </div>
+              <div className="md:w-1/3 px-4 mb-8">
+                <img className="rounded shadow-md" src={P12} alt="" />
+              </div>
+              <div className="md:w-1/3 px-4 mb-8">
+                <img className="rounded shadow-md" src={P13} alt="" />
+              </div>
             </div>
-            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P02} alt="" />
-            </div>
-          </div>
-        </section>
-
-        <section className="py-8 px-4">
-          <div className="flex flex-wrap -mx-4">
-            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P04} alt="" />
-            </div>
-            <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P05} alt="" />
-            </div>
-          </div>
-        </section>
-
-        <section className="pt-8 px-4">
-          <div className="flex flex-wrap -mx-4">
-            <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P07} alt="" />
-            </div>
-            <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P08} alt="" />
-            </div>
-            <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P10} alt="" />
-            </div>
-            <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P11} alt="" />
-            </div>
-            <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P12} alt="" />
-            </div>
-            <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P13} alt="" />
-            </div>
-          </div>
-        </section>
+          </section>
+        </FadeInSection>
       </div>
     </div>
   );

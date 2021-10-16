@@ -48,7 +48,7 @@ const Gallery = ({ language }) => {
         <section className="py-8 px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P08} alt="" />
+              <img className="rounded shadow-md" src={P09} alt="" />
             </div>
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
               <img className="rounded shadow-md" src={P03} alt="" />
@@ -59,10 +59,10 @@ const Gallery = ({ language }) => {
         <section className="py-8 px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P12} alt="" />
+              <img className="rounded shadow-md" src={P06} alt="" />
             </div>
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P05} alt="" />
+              <img className="rounded shadow-md" src={P02} alt="" />
             </div>
           </div>
         </section>
@@ -70,10 +70,10 @@ const Gallery = ({ language }) => {
         <section className="py-8 px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P06} alt="" />
+              <img className="rounded shadow-md" src={P04} alt="" />
             </div>
             <div className="md:w-1/2 px-4 mb-8 md:mb-0">
-              <img className="rounded shadow-md" src={P07} alt="" />
+              <img className="rounded shadow-md" src={P05} alt="" />
             </div>
           </div>
         </section>
@@ -81,10 +81,10 @@ const Gallery = ({ language }) => {
         <section className="pt-8 px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P02} alt="" />
+              <img className="rounded shadow-md" src={P07} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P09} alt="" />
+              <img className="rounded shadow-md" src={P08} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
               <img className="rounded shadow-md" src={P10} alt="" />
@@ -93,7 +93,7 @@ const Gallery = ({ language }) => {
               <img className="rounded shadow-md" src={P11} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
-              <img className="rounded shadow-md" src={P04} alt="" />
+              <img className="rounded shadow-md" src={P12} alt="" />
             </div>
             <div className="md:w-1/3 px-4 mb-8">
               <img className="rounded shadow-md" src={P13} alt="" />

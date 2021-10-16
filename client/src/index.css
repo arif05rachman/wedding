@@ -48,6 +48,9 @@
     color: #d5ad6d;
     @apply font-alef;
   }
+  html {
+    scroll-behavior: smooth !important;
+  }
 }
 
 @layer utilities {

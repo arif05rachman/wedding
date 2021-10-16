@@ -86,9 +86,9 @@ const Wedding = ({ language }) => {
                 w-16
                 md:w-32
                 bg-gradient-to-t
-                from-yellow-600
-                via-red-500
-                to-purple-400
+                from-yellow-500
+                via-black
+                to-yellow-500
                 p-1
                 md:p-2
                 select-none
@@ -144,9 +144,9 @@ const Wedding = ({ language }) => {
                 w-16
                 md:w-32
                 bg-gradient-to-t
-                from-yellow-600
-                via-red-500
-                to-purple-400
+                from-yellow-500
+                via-black
+                to-yellow-500
                 p-1
                 md:p-2
                 select-none

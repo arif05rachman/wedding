@@ -47,7 +47,7 @@ const Nav = ({ language, changeLaguage }) => {
           {language === "ID" ? "GALERI" : "GALLERY"}
         </a>
         <a href="#wishes" className=" transform hover:scale-110 transition-all">
-          {language === "ID" ? "UNDANGAN" : "WISHES"}
+          {language === "ID" ? "UCAPAN" : "WISHES"}
         </a>
         <span className="flex justify-center align-middle gap-1">
           <button>

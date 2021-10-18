@@ -8,6 +8,7 @@ import {
   Gallery,
   Protokol,
   Footer,
+  Envelope,
 } from "./components";
 import Sound from "./assets/audio/sound.mp3";
 import { FadeInSection } from "./components";
@@ -33,6 +34,8 @@ const useAudio = (url) => {
 };
 
 const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   // The back-to-top button is hidden at the beginning
   const [showButton, setShowButton] = useState(false);
   const [language, setLanguage] = useState("ID");
@@ -61,50 +64,56 @@ const App = () => {
 
   return (
     <div>
-      <div className="music" onClick={toggle}>
-        {!playing ? (
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/mute--v1.png"
-            alt="mute"
-            width="32rem"
-          />
-        ) : (
-          <img
-            src="https://img.icons8.com/ios-filled/50/000000/room-sound.png"
-            alt="sound"
-            width="32rem"
-          />
-        )}
-      </div>
-      <Navbar language={language} changeLaguage={changeLaguage} />
+      {!isOpen ? (
+        <Envelope setIsOpen={setIsOpen} playAudio={toggle} />
+      ) : (
+        <div>
+          <div className="music" onClick={toggle}>
+            {!playing ? (
+              <img
+                src="https://img.icons8.com/ios-filled/50/000000/mute--v1.png"
+                alt="mute"
+                width="24rem"
+              />
+            ) : (
+              <img
+                src="https://img.icons8.com/ios-filled/50/000000/room-sound.png"
+                alt="sound"
+                width="24rem"
+              />
+            )}
+          </div>
+          <Navbar language={language} changeLaguage={changeLaguage} />
 
-      <FadeInSection>
-        <Countdown language={language} />
-      </FadeInSection>
-      <FadeInSection>
-        <Slider language={language} />
-      </FadeInSection>
-      <FadeInSection>
-        <Wedding language={language} />
-      </FadeInSection>
-      <FadeInSection>
-        <Protokol language={language} />
-      </FadeInSection>
-      <FadeInSection>
-        <Gallery language={language} />
-      </FadeInSection>
-      <FadeInSection>
-        <Wishes language={language} />
-      </FadeInSection>
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="back-to-top bg-gold text-white font-bold uppercase transform hover:scale-105 transition-all hover:bg-yellow-500"
-        >
-          &#8679;
-        </button>
+          <FadeInSection>
+            <Countdown language={language} />
+          </FadeInSection>
+          <FadeInSection>
+            <Slider language={language} />
+          </FadeInSection>
+          <FadeInSection>
+            <Wedding language={language} />
+          </FadeInSection>
+          <FadeInSection>
+            <Protokol language={language} />
+          </FadeInSection>
+          <FadeInSection>
+            <Gallery language={language} />
+          </FadeInSection>
+          <FadeInSection>
+            <Wishes language={language} />
+          </FadeInSection>
+          {showButton && (
+            <button
+              onClick={scrollToTop}
+              className="back-to-top bg-gold text-white font-bold uppercase transform hover:scale-105 transition-all hover:bg-yellow-500"
+            >
+              &#8679;
+            </button>
+          )}
+          <Footer language={language} />
+        </div>
       )}
-      <Footer language={language} />
     </div>
   );
 };

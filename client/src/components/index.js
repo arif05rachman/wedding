@@ -8,3 +8,4 @@ export { default as Carousel } from "./Carousel";
 export { default as Protokol } from "./Protokol";
 export { default as Footer } from "./Footer";
 export { default as FadeInSection } from "./FadeInSection";
+export { default as Envelope } from "./Envelope";

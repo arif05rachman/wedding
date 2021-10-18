@@ -166,7 +166,7 @@
     color: #a59090;
     border: 1px solid #dcbc88;
     transition: all 0.6s linear 0.4s;
-    background-image: url("https://i.pinimg.com/564x/03/c3/fe/03c3fe8f10c79787d45f0cff0bc7bb52.jpg");
+    background-image: url("./assets/images/paper.jpg");
   }
   .envelope__letter:hover {
     height: 170px;

@@ -87,7 +87,7 @@ const Countdown = ({ language }) => {
       <section className="justify-center py-1 md:py-8 text-black grid gap-2">
         <p className="text-center font-bold sm:text-sm md:text-base xl:text-lg text-xs">
           {language === "ID"
-            ? "SAMPAI PERNIKAHNA DARI"
+            ? "SAMPAI PERNIKAHAN DARI"
             : "UNTIL THE WEDDING OF"}
         </p>
         <p className="font-Sacramento sm:text-5xl md:text-6xl xl:text-7xl text-3xl">

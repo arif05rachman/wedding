@@ -52,7 +52,7 @@ const Countdown = ({ language }) => {
         >
           <div className="bg-black rounded-md shadow-lg bg-opacity-70 p-2 sm:p-3 sm:py-5 md:py-10 text-yellow-400 w-12 sm:w-20 md:w-28 transition-all text-center">
             <p className="font-alef text-lg sm:text-3xl md:text-5xl">
-              {addZeroPrefix(timeLeft.days)}
+              {addZeroPrefix(timeLeft.days && 0)}
             </p>
             <p className="font-alef text-2xs sm:text-xs md:text-base">
               {language === "ID" ? "HARI" : "DAYS"}
@@ -60,7 +60,7 @@ const Countdown = ({ language }) => {
           </div>
           <div className="bg-black rounded-md shadow-lg bg-opacity-70 p-2 sm:p-3 sm:py-5 md:py-10 text-yellow-400 w-12 sm:w-20 md:w-28 transition-all text-center">
             <p className="font-alef text-lg sm:text-3xl md:text-5xl">
-              {addZeroPrefix(timeLeft.hours)}
+              {addZeroPrefix(timeLeft.hours && 0)}
             </p>
             <p className="font-alef text-2xs sm:text-xs md:text-base">
               {language === "ID" ? "JAM" : "HOURS"}
@@ -68,7 +68,7 @@ const Countdown = ({ language }) => {
           </div>
           <div className="bg-black rounded-md shadow-lg bg-opacity-70 p-2 sm:p-3 sm:py-5 md:py-10 text-yellow-400 w-12 sm:w-20 md:w-28 transition-all text-center">
             <p className="font-alef text-lg sm:text-3xl md:text-5xl">
-              {addZeroPrefix(timeLeft.minutes)}
+              {addZeroPrefix(timeLeft.minutes && 0)}
             </p>
             <p className="font-alef text-2xs sm:text-xs md:text-base">
               {language === "ID" ? "MENIT" : "MINUTES"}
@@ -76,7 +76,7 @@ const Countdown = ({ language }) => {
           </div>
           <div className="bg-black rounded-md shadow-lg bg-opacity-70 p-2 sm:p-3 sm:py-5 md:py-10 text-yellow-400 w-12 sm:w-20 md:w-28 transition-all text-center">
             <p className="font-alef text-lg sm:text-3xl md:text-5xl">
-              {addZeroPrefix(timeLeft.seconds)}
+              {addZeroPrefix(timeLeft.seconds && 0)}
             </p>
             <p className="font-alef text-2xs sm:text-xs md:text-base">
               {language === "ID" ? "DETIK" : "SECONDS"}
